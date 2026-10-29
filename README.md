@@ -1,75 +1,54 @@
-# React + TypeScript + Vite
+# React-Facts
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React + TypeScript Learning Project
 
-Currently, two official plugins are available:
+A simple web application built as a personal learning project to practice modern frontend development workflows. The main goal of this project is to get hands-on experience with **React functional components**, strict typing with **TypeScript**, and fast building via **Vite**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🧠 Learning Objectives
 
-## React Compiler
+- **Component Architecture:** Splitting layouts into modular pieces like `Navbar` and `Main`.
+- **TypeScript Integration:** Implementing explicit types and interfaces within a React environment.
+- **CSS Layouts:** Practicing global styling resets, custom flexbox layouts (`flex-direction: column`), and responsive navigation styles.
+- **Vite Ecosystem:** Understanding fast bundling configurations and fast hot module replacement (HMR).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📁 Project Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+react-proj/
+├── src/
+    ├── assets/             # Managing local image assets (hero, logos)
+    ├── Components/         # Building reusable UI layouts
+    │   ├── Navbar.tsx      # Custom navigation setup
+    │   └── Main.tsx        # Main body container
+    ├── App.tsx             # Application wrapper
+    ├── index.css           # Core global flexbox layout and typography configurations
+    └── main.tsx            # React application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Local Setup
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Follow these simple steps to run this project locally on your machine:
 
-```
+1. **Navigate to the directory:**
+
+   ```bash
+   cd react-proj
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the local development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **View the app:** Open your browser and navigate to the address shown in your terminal (typically `http://localhost:5173`).
